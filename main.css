@@ -6,6 +6,22 @@
   box-sizing: border-box;
 }
 
+h1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 40px; /* Ajusta si quieres */
+  }
+  
+  h1 span {
+    display: inline-block;
+    font-size: 50px; /* o lo que estés usando */
+    color: #fff;
+    position: relative;
+    top: -50px; /* ← SUBE las letras */
+  }
+
 span {
     font-size: 100px;
     color: #fcd9d9;
@@ -1409,4 +1425,5 @@ body {
 .container * {
   -webkit-animation-play-state: paused !important;
           animation-play-state: paused !important;
+
 }
