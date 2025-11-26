@@ -6,21 +6,31 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--dark-color);
+  overflow: hidden;
+  position: relative;
+}
+
 h1 {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    margin-top: 40px; /* Ajusta si quieres */
-  }
-  
-  h1 span {
-    display: inline-block;
-    font-size: 50px; /* o lo que estés usando */
-    color: #fff;
-    position: relative;
-    top: -50px; /* ← SUBE las letras */
-  }
+  position: absolute;
+  top: 20px;             /* ajusta este valor para mover más arriba o más abajo */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.3em;            /* espacio entre letras */
+  z-index: 100;          /* para estar encima de las flores */
+  pointer-events: none;  /* opcional: para que no interfiera si hay interacciones */
+}
+
+h1 span {
+  font-size: 5rem;        /* ajusta tamaño si es necesario */
+  color: #fcd9d9;
+  display: inline-block;
+  /* quita posición relativa/animation temporalmente si afecta el flujo visual */
+}
 
 span {
     font-size: 100px;
@@ -1427,3 +1437,4 @@ body {
           animation-play-state: paused !important;
 
 }
+
