@@ -6,13 +6,16 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background: var(--dark-color);
-  overflow: hidden;
-  position: relative;
+.contenedor {
+    position: fixed;      /* SIEMPRE visible arriba */
+    top: 20px;            /* Baja o sube el texto */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    z-index: 9999;        /* ARRIBA DE TODO */
 }
+
 
 h1 {
   position: absolute;
@@ -1437,4 +1440,5 @@ body {
           animation-play-state: paused !important;
 
 }
+
 
